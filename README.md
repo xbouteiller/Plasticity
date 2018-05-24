@@ -20,6 +20,9 @@ The function is called RDPI. It accepts 4 parameters:
 
 Thus dataset should contain 3 columns: one for the values of the measured trait, one for the environmental condition, one for the individuals (or families or species depending of the experimental design) hat is planted in each environment.
 
+The function return a two columns data frame:
+* First column is called "Indiv" and contained each replicated individual over all environments
+* Second colum is called "RDPI" and contained the RDPI value
 
 #### References:
 
