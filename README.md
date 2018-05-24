@@ -4,7 +4,7 @@ A R function to compute Relative Distances Plasticity Index (RDPI) as defined in
 #### Description
 
 RDPI is defined as the absolute phenotypic distances between individuals of same genotype and different environments, divided by one of the two phenotypic values.
-Thus mathematic formulation can be expressed as follow:
+Thus mathematic formulation can be expressed as follows:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=RDPI&space;=&space;\sum&space;\frac{&space;\left&space;|&space;X_{ij}&space;-&space;X_{i'j}&space;\right&space;|&space;}{&space;max(X_{ij}&space;,&space;X_{i'j})&space;}&space;\times&space;\frac{1}{n}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?RDPI&space;=&space;\sum&space;\frac{&space;\left&space;|&space;X_{ij}&space;-&space;X_{i'j}&space;\right&space;|&space;}{&space;max(X_{ij}&space;,&space;X_{i'j})&space;}&space;\times&space;\frac{1}{n}" title="RDPI = \sum \frac{ \left | X_{ij} - X_{i'j} \right | }{ max(X_{ij} , X_{i'j}) } \times \frac{1}{n}" /></a>
 
