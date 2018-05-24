@@ -6,7 +6,19 @@ A R function to compute Relative Distances Plasticity Index (RDPI) as defined in
 RDPI is defined as the absolute phenotypic distances between individuals of same genotype and different environments, divided by one of the two phenotypic values.
 Thus mathematic formulation can be expressed as follow:
 
-- <a href="https://www.codecogs.com/eqnedit.php?latex=RDPI&space;=&space;\sum&space;\frac{&space;\left&space;|&space;X_{ij}&space;-&space;X_{i'j'}&space;\right&space;|&space;}{&space;max(X_{ij}&space;,&space;X_{i'j'})&space;}&space;\times&space;\frac{1}{n}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?RDPI&space;=&space;\sum&space;\frac{&space;\left&space;|&space;X_{ij}&space;-&space;X_{i'j'}&space;\right&space;|&space;}{&space;max(X_{ij}&space;,&space;X_{i'j'})&space;}&space;\times&space;\frac{1}{n}" title="RDPI = \sum \frac{ \left | X_{ij} - X_{i'j'} \right | }{ max(X_{ij} , X_{i'j'}) } \times \frac{1}{n}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=RDPI&space;=&space;\sum&space;\frac{&space;\left&space;|&space;X_{ij}&space;-&space;X_{i'j'}&space;\right&space;|&space;}{&space;max(X_{ij}&space;,&space;X_{i'j})&space;}&space;\times&space;\frac{1}{n}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?RDPI&space;=&space;\sum&space;\frac{&space;\left&space;|&space;X_{ij}&space;-&space;X_{i'j'}&space;\right&space;|&space;}{&space;max(X_{ij}&space;,&space;X_{i'j'})&space;}&space;\times&space;\frac{1}{n}" title="RDPI = \sum \frac{ \left | X_{ij} - X_{i'j'} \right | }{ max(X_{ij} , X_{i'j'}) } \times \frac{1}{n}" /></a>
+
+Where i referred to a given level of the environment treatment (i.e. one of the temperature conditions) and i’ another given environment different from i. j referred to a given family (i.e. a tree). Thus Xij is the phenotypic value for a given trait for the family j in the environment i. n is defined as the number of distances calculated (i.e. number of pairwise environment).
+
+### R Function
+
+The function is called RDPI. It accepts 4 parameters:
+* Data: the Dataset
+* Trait: Column name of the dataset corresponding to measured trait
+* Env : column name of the dataset corresponding to the different levels of environmental conditions
+* Indiv : column name of the dataset corresponding to the individuals (or families or species depending of the experimental design) planted in each environment
+
+Thus dataset should contain 3 columns: one for the values of the measured trait, one for the environmental condition, one for the individuals (or families or species depending of the experimental design) hat is planted in each environment.
 
 
 #### References:
