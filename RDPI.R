@@ -16,7 +16,7 @@
 #second colum is called "RDPI" and contained the RDPI value
 
 #Reference
-#Valladares F, Sanchez-Gomez D, Zavala M a. (2006) Quantitative estimation of phenotypic plasticity: Bridging the gap between the evolutionary concept and its ecological applications. J #Ecol 94:1103–1116 . doi: 10.1111/j.1365-2745.2006.01176.x
+#Valladares F, Sanchez-Gomez D, Zavala M a. (2006) Quantitative estimation of phenotypic plasticity: Bridging the gap between the evolutionary concept and its ecological applications. J #Ecol 94:1103â€“1116 . doi: 10.1111/j.1365-2745.2006.01176.x
 
 #Citation
 #https://github.com/xbouteiller/Plasticity
@@ -70,17 +70,17 @@ RDPI <- function( Data, Trait, Env, Indiv) {
 		
 	#step1 : pairwise environments relative distances of plascity (RDPIs in Valladares et al. (2006))
 	
-	RDPIs<- matrix(data =NA, nrow = nrow(VecIndiv), ncol = NENV)
+	RDPIs<- matrix(data =NA, nrow = nrow(VecIndiv), ncol = ndist)
 	
 	
 	Ini = 1
 	Increment = 0 
-	for(i in 1:(NENV-1)){
+	for(i in 1:(ndist-1)){
 	
-		if(Ini < NENV) {Ini = Ini +1}
+		if(Ini < ndist) {Ini = Ini +1}
 		
 		
-		for(j in Ini:NENV){
+		for(j in Ini:ndist){
 		Increment = Increment +1 
 				
 		RDPItemp<-abs(Data3[,j] - Data3[,i])/ apply( Data3[,c(i,j)], M =1, max)
@@ -103,10 +103,10 @@ RDPI <- function( Data, Trait, Env, Indiv) {
 	#step 2: sum and division by the number of distances
 
 	if(is.numeric(RDPIs[,1])){
-	RDPI = data.frame(Indiv = VecIndiv, RDPI = rowSums(RDPIs)/NENV)
+	RDPI = data.frame(Indiv = VecIndiv, RDPI = rowSums(RDPIs)/ndist)
 	cat(paste0("RDPI",bannerBreak,"\n"))
 	}else{
-	RDPI = data.frame(Indiv = VecIndiv, RDPI = rowSums(RDPIs[,-1])/NENV)
+	RDPI = data.frame(Indiv = VecIndiv, RDPI = rowSums(RDPIs[,-1])/ndist)
 	cat(paste0("RDPI",bannerBreak,"\n"))
 	}
 	
