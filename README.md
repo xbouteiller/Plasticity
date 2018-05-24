@@ -12,11 +12,14 @@ Where i referred to a given level of the environment treatment (i.e. one of the 
 
 ### R Function
 
+The function is included in the file RDPI.R.
+You can download the function and load it into R with the source function: source("RDPI.R")
+
 The function is called RDPI. It accepts 4 parameters:
 * Data: the Dataset
 * Trait: Column name of the dataset corresponding to measured trait
 * Env : column name of the dataset corresponding to the different levels of environmental conditions
-* Indiv : column name of the dataset corresponding to the individuals (or families or species depending of the experimental design) planted in each environment
+* Indiv : column name of the dataset corresponding to the individuals (or families or species depending of the experimental design) planted replicated over all environments
 
 Thus dataset should contain 3 columns: one for the values of the measured trait, one for the environmental condition, one for the individuals (or families or species depending of the experimental design) hat is planted in each environment.
 
