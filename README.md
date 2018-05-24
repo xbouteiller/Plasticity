@@ -22,7 +22,7 @@ Thus dataset should contain 3 columns: one for the values of the measured trait,
 
 The function return a two columns data frame:
 * First column is called "Indiv" and contained each replicated individual over all environments
-* Second colum is called "RDPI" and contained the RDPI value
+* Second colum is called "RDPI" and contained the RDPI values
 
 #### References:
 
