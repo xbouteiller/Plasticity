@@ -83,7 +83,7 @@ RDPI <- function( Data, Trait, Env, Indiv) {
 		for(j in Ini:ndist){
 		Increment = Increment +1 
 				
-		RDPItemp<-abs(Data3[,j] - Data3[,i])/ apply( Data3[,c(i,j)], M =1, max)
+		RDPItemp<-abs(Data3[,j] - Data3[,i])/ apply( Data3[,c(i,j)], M =1, sum)
 		
 		RDPIs[,Increment]<-RDPItemp
 		
